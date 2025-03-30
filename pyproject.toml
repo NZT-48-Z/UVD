@@ -1,0 +1,11 @@
+[project]
+name = "uvd"
+version = "0.1.0"
+description = "Fast YouTube video & audio downloader API built with FastAPI and yt-dlp. Download videos in HD, MP4, MP3"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.12",
+    "uvicorn>=0.34.0",
+    "yt-dlp>=2025.3.27",
+]

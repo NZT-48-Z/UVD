@@ -1,0 +1,600 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #ff0000;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h1 i {
+    margin-right: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Download Section */
+.download-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff0000;
+}
+
+.input-group button {
+    padding: 15px 25px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #cc0000;
+}
+
+.input-group button i {
+    margin-right: 8px;
+}
+
+/* Video Info Section */
+.video-info {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.thumbnail-container {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#video-thumbnail {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.video-details {
+    flex: 1;
+}
+
+.video-details h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.video-details p {
+    color: #666;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.video-details i {
+    margin-right: 8px;
+    color: #ff0000;
+}
+
+/* Download Options */
+.download-options {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.download-options h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.download-options h3 i {
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+.format-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.format-tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.format-tab.active {
+    color: #ff0000;
+}
+
+.format-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+}
+
+.quality-options h4 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.quality-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.quality-btn {
+    padding: 8px 15px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.quality-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.quality-btn.selected {
+    background-color: #ff0000;
+    color: white;
+}
+
+#download-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#download-btn:hover {
+    background-color: #cc0000;
+}
+
+#download-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* How To Use Section */
+.how-to-use {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.how-to-use h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.how-to-use h2 i {
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+.how-to-use ol {
+    padding-left: 20px;
+}
+
+.how-to-use li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer .disclaimer {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ff0000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-group input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .input-group button {
+        border-radius: 5px;
+    }
+    
+    .thumbnail-container {
+        flex-direction: column;
+    }
+    
+    #video-thumbnail {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .format-tabs {
+        flex-direction: column;
+    }
+    
+    .format-tab {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .quality-buttons {
+        flex-direction: column;
+    }
+    
+    .quality-btn {
+        width: 100%;
+    }
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #8a2be2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-theme .download-section,
+body.dark-theme .how-to-use {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .input-group input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-theme .thumbnail-container,
+body.dark-theme .download-options {
+    background-color: #2d2d2d;
+}
+
+body.dark-theme .video-details h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .video-details p {
+    color: #bbbbbb;
+}
+
+body.dark-theme .quality-btn {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-theme .quality-btn:hover {
+    background-color: #ffffff;
+}
+
+body.dark-theme .quality-btn.selected {
+    background-color: #8a2be2;
+    color: white;
+}
+
+body.dark-theme .format-tab {
+    color: #bbbbbb;
+}
+
+body.dark-theme .format-tab.active {
+    color: #8a2be2;
+}
+
+body.dark-theme footer {
+    color: #bbbbbb;
+}
+
+body.dark-theme footer .disclaimer {
+    color: #888;
+}
+
+/* Purple accent colors replace red in dark theme */
+body.dark-theme header h1,
+body.dark-theme .video-details i,
+body.dark-theme .download-options h3 i,
+body.dark-theme .how-to-use h2 i {
+    color: #8a2be2;
+}
+
+body.dark-theme .input-group button,
+body.dark-theme #download-btn {
+    background-color: #8a2be2;
+}
+
+body.dark-theme .input-group button:hover,
+body.dark-theme #download-btn:hover {
+    background-color: #7b1fa2;
+}
+
+body.dark-theme .format-tab.active::after {
+    background-color: #8a2be2;
+}
+
+/* Theme Icon */
+.theme-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.theme-icon:hover {
+    transform: scale(1.1);
+}
+
+body.dark-theme .theme-icon {
+    color: #bb86fc;
+}
+
+/* Обновляем иконки для темной темы */
+body.dark-theme .theme-icon i.fa-moon {
+    display: none;
+}
+
+body.dark-theme .theme-icon i.fa-sun {
+    display: inline-block;
+    color: #ffc107;
+}
+
+.theme-icon i.fa-sun {
+    display: none;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ff0000; /* Красный по умолчанию */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+body.dark-theme .loading-spinner {
+    border-top: 5px solid #8a2be2; /* Фиолетовый в тёмной теме */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    color: white;
+    font-size: 1.2rem;
+}
